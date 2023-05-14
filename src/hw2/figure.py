@@ -9,12 +9,12 @@ class Figure(ABC):
 
     @property
     @abstractmethod
-    def area(self):
+    def area(self) -> Union[int, float]:
         ...
 
     @property
     @abstractmethod
-    def perimeter(self):
+    def perimeter(self) -> Union[int, float]:
         ...
 
     def add_area(self, figure: "Figure") -> Union[int, float]:

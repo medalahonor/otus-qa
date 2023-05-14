@@ -7,7 +7,7 @@ from src.hw2.figure import Figure
 class Circle(Figure):
     def __init__(self, radius: Union[int, float]):
         if type(radius) not in (int, float):
-            raise ValueError
+            raise ValueError(f"`radius` must be str or float, actual {type(radius)}")
         self.radius = radius
 
     @property
@@ -17,7 +17,3 @@ class Circle(Figure):
     @property
     def perimeter(self):
         return 2 * math.pi * self.radius
-
-
-if __name__ == "__main__":
-    print(Circle().area)
